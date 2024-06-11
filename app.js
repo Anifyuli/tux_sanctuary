@@ -15,13 +15,16 @@ app.use(methodOverride("_method"));
 
 // Routing in here
 app.get("/", (req, res) => {
-  res.render("index", { layout: "partials/main" });
+  res.render("indeks", { layout: "partials/main" });
 });
 
 // Error handling
 app.use((req, res) => {
   res.status(404);
-  res.send("Error 404: Page not found");
+  res.render("404-error", {
+    title: "404 error : Page not found",
+    layout: "partials/main",
+  });
 });
 
 // Starting ExpresJS server service
