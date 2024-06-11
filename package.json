@@ -1,0 +1,42 @@
+{
+  "name": "tux_sanctuary",
+  "version": "0.0.1",
+  "description": "TuxSanctuary : A Heaven for Linux Enthusiasts and Open Source Advocates",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "serve": "pnpm nodemon app",
+    "tailwind:css": "postcss public/css/tailwind.css -o public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Anifyuli/tux_sanctuary.git"
+  },
+  "keywords": [
+    "linux",
+    "blog",
+    "distros",
+    "review"
+  ],
+  "author": "Anifyuli",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Anifyuli/tux_sanctuary/issues"
+  },
+  "homepage": "https://github.com/Anifyuli/tux_sanctuary#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "method-override": "^3.0.0",
+    "mongosh": "^2.2.6",
+    "nodemon": "^3.1.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.4"
+  }
+}
