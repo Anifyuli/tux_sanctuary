@@ -1,0 +1,36 @@
+<div class="container mx-auto p-5">
+  <div class="card bg-base-100 shadow-xl p-6">
+    <h1 class="card-title text-3xl font-bold mb-6">Edit Blog Post</h1>
+    <form action="/edit-blog/<%= blog._id %>?_method=PUT" method="POST">
+      <div class="form-control mb-4">
+        <label class="label" for="title">
+          <span class="label-text">Title</span>
+        </label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="input input-bordered w-full"
+          value="<%= blog.title %>"
+          required
+        />
+      </div>
+      <div class="form-control mb-4">
+        <label class="label" for="content">
+          <span class="label-text">Content</span>
+        </label>
+        <textarea
+          id="content"
+          name="content"
+          class="textarea textarea-bordered h-40 w-full"
+          required
+        >
+<%= blog.content %></textarea
+        >
+      </div>
+      <div class="form-control">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

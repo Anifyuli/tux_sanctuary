@@ -1,12 +1,6 @@
-<div class="mx-5 max-w-full">
-  <%# Tux News, title news section %>
-  <div>
-    <h1 class="text-center">Latest top 3 news here</h1>
-  </div>
-
-  <div class="container mx-auto p-5">
-    <div class="flex flex-col w-full">
-      <% blogs.forEach(blog => { %>
+<div class="container mx-auto p-5">
+  <div class="flex flex-col w-full">
+    <% blogs.forEach(blog => { %>
       <div class="w-full mx-auto my-2">
         <a href="/blog/<%= blog._id %>">
           <div class="flex-col p-3 card lg:card-side bg-base-200 shadow-md">
@@ -20,8 +14,6 @@
           </div>
         </a>
       </div>
-      <% }) %>
-    </div>
+    <% }) %>
   </div>
-  <%# End div %>
 </div>

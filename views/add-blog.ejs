@@ -1,0 +1,56 @@
+<div class="container mx-auto p-5">
+  <div class="card bg-base-100 shadow-xl p-6">
+    <h1 class="card-title text-3xl font-bold mb-6">Create New Blog Post</h1>
+    <form action="/add-blog" method="POST">
+      <div class="form-control mb-4">
+        <label class="label" for="username">
+          <span class="label-text">Author</span>
+        </label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="input input-bordered w-full"
+          required
+        />
+      </div>
+      <div class="form-control mb-4">
+        <label class="label" for="title">
+          <span class="label-text">Title</span>
+        </label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="input input-bordered w-full"
+          required
+        />
+      </div>
+      <div class="form-control mb-4">
+        <label class="label" for="categories">
+          <span class="label-text">Categories (comma separated)</span>
+        </label>
+        <input
+          type="text"
+          id="categories"
+          name="categories"
+          class="input input-bordered w-full"
+        />
+      </div>
+      <div class="form-control mb-4">
+        <label class="label" for="content">
+          <span class="label-text">Content</span>
+        </label>
+        <textarea
+          id="content"
+          name="content"
+          class="textarea textarea-bordered h-40 w-full"
+          required
+        ></textarea>
+      </div>
+      <div class="form-control">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
