@@ -1,7 +1,20 @@
 <div class="container mx-auto p-5">
   <div class="card bg-base-100 shadow-xl p-6">
     <h1 class="card-title text-3xl font-bold mb-6">Edit Blog Post</h1>
-    <form action="/edit-blog/<%= blog._id %>?_method=PUT" method="POST">
+    <form action="/blog/<%= blog._id %>?_method=PUT" method="POST">
+      <div class="form-control mb-4">
+        <label class="label" for="author">
+          <span class="label-text">Author</span>
+        </label>
+        <input
+          type="text"
+          id="author"
+          name="author"
+          value="<%= blog.author %>"
+          class="input input-bordered w-full"
+          required
+        />
+      </div>
       <div class="form-control mb-4">
         <label class="label" for="title">
           <span class="label-text">Title</span>
@@ -10,9 +23,21 @@
           type="text"
           id="title"
           name="title"
-          class="input input-bordered w-full"
           value="<%= blog.title %>"
+          class="input input-bordered w-full"
           required
+        />
+      </div>
+      <div class="form-control mb-4">
+        <label class="label" for="categories">
+          <span class="label-text">Categories (comma separated)</span>
+        </label>
+        <input
+          type="text"
+          id="categories"
+          name="categories"
+          value="<%= blog.categories.join(', ') %>"
+          class="input input-bordered w-full"
         />
       </div>
       <div class="form-control mb-4">
